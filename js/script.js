@@ -4,7 +4,7 @@ createApp({
 
     data() {
         return {
-            imageI : 0,
+            imageI: 0,
             movies: {
                 slides: [
                     {
@@ -32,19 +32,19 @@ createApp({
             }
         }
     },
-    methods : {
+    methods: {
         imgBefore() {
             this.imageI--;
             if (this.imageI < 0) {
                 this.imageI = this.movies.slides.length - 1;
             }
         },
-        /* imgNext() {
+        imgNext() {
             this.imageI++;
-            if (this.imageI > 0) {
-                this.imageI = this.movies.slides.length + 1;
+            if (this.imageI > this.movies.slides.length - 1) {
+                this.imageI = 0;
             }
-        } */
+        }
     }
 
 }).mount('.slider-wrapper')
